@@ -1,0 +1,16 @@
+<label>Flight Number:</label>
+<%= @balloon.flight_number%>
+<br>
+<label>Location:</label>
+<%= @balloon.location%>
+<br>
+<label>Technician:</label>
+<%= @balloon.technician%>
+<br>
+<label>Recovered:</label>
+<%= @balloon.recovered%>
+<br>
+<br>
+<%= link_to "Edit Page", edit_balloon_url(@balloon)%>
+</br>
+<%= link_to "Balloons Index", balloons_url%>

@@ -1,0 +1,39 @@
+EDIT PAGE <%= @balloon.flight_number%>
+<%= render "shared/errors" %>
+<br>
+<form action="<%= balloon_url(@balloon)%>" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="hidden" name="_method" value="patch">
+<br>
+<label for="balloon_flight_number">Flight Number<label>
+  <input
+    type="text"
+    name="balloon[flight_number]"
+    id="balloon_flight_number"
+    value="<%= @balloon.flight_number %>">
+<br>
+<label for="balloon_location">Location<label>
+  <input
+    type="text"
+    name="balloon[location]"
+    id="balloon_location"
+    value="<%= @balloon.location%>">
+<br>
+<label for="ballon_technician">Technician<label>
+  <input
+    type="text"
+    name="balloon[technician]"
+    id="ballon_technician"
+    value="<%= @balloon.technician%>">
+<br>
+<label for="balloon_recovered">Recovered<label>
+  <input
+    type="text"
+    name="balloon[recovered]"
+    id="balloon_recovered"
+    value="<%= @balloon.recovered%>">
+<br>
+
+<input type="submit" value="Submit">
+</form>
+<%= link_to "Index Page", balloons_url%>

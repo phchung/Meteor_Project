@@ -1,0 +1,8 @@
+<h1>Balloon Index Page </h1>
+<br>
+<label>Choose Balloon By Flight Number</label>
+<ul>
+<%@balloons.each do |balloon|%>
+  <li><%=link_to balloon.flight_number, balloon_url(balloon)%></li>
+  <%end%>
+</ul>
